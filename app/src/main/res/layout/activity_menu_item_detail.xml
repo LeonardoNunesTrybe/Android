@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/detail_scroll_view"
+    android:background="@color/primary">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_linear_container"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_back"
+            android:background="@color/secondary"
+            android:textColor="@color/white"
+            app:icon="@drawable/arrow_back"
+            android:backgroundTint="@color/secondary"
+            android:text="@string/back"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_logo"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_title"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:text="Detalhe do Prato"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/detail_image"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/prato_01"
+            android:layout_marginBottom="10dp"/>
+        
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_name"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_description"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="18sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_price"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/Tertiary"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

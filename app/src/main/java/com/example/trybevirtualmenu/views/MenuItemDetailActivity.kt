@@ -4,11 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trybevirtualmenu.R
 import com.example.trybevirtualmenu.data.PratoDatabase
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 
 class MenuItemDetailActivity : AppCompatActivity() {
 
+    private val mPratoButton: MaterialButton by lazy { findViewById(R.id.detail_back) }
     private val mPratoImage: ShapeableImageView by lazy { findViewById(R.id.detail_image)}
     private val mPratoName: MaterialTextView by lazy { findViewById(R.id.detail_name)}
     private val mPratoDescription: MaterialTextView by lazy { findViewById(R.id.detail_description)}
@@ -25,6 +27,10 @@ class MenuItemDetailActivity : AppCompatActivity() {
         mPratoName.text = prato.name
         mPratoDescription.text = prato.description
         mPratoPrice.text = prato.price
+
+        mPratoButton.setOnClickListener{
+            finish()
+        }
 
     }
 }

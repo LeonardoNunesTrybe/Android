@@ -20,7 +20,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_item_detail)
 
-        val pratoPosition = intent.getIntExtra("prato_position", -1)
+        val pratoPosition = intent.getIntExtra("prato_position", 0)
 
         val prato = PratoDatabase.getAll()[pratoPosition]
         mPratoImage.setImageResource(prato.image)
